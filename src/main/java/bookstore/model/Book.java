@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity (name = "book")
 public class Book {
@@ -14,6 +15,8 @@ public class Book {
 	
 	String title;
 	
+	@ManyToOne (targetEntity = Author.class)
+	Author author;
 	
 	public Book() {
 		super();
@@ -36,6 +39,15 @@ public class Book {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	
+	public Author getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Author author) {
+		this.author = author;
 	}
 
 	@Override
