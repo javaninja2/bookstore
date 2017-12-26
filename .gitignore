@@ -14,6 +14,7 @@ target/
 .DS_Store
 /.svn/
 /.settings/
+derby.log
 
 ### IntelliJ IDEA ###
 .idea
